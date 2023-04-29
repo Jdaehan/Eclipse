@@ -1,0 +1,6 @@
+package 연습;
+
+public class ButtonImageEx {
+   public static void main(String[] args) {
+   }
+}
