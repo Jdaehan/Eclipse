@@ -1,0 +1,10 @@
+public class OpenChallenge {
+	public OpenChallenge() {
+		throw new Error(
+				"Unresolved compilation problem: \n\tMust declare a named package because this compilation unit is associated to the named module 'Pro1004'\n");
+	}
+
+	public static void main(String[] var0) {
+		throw new Error("Unresolved compilation problem: \n");
+	}
+}
