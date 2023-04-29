@@ -1,0 +1,41 @@
+import java.awt.Container;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class FlowLayoutEx extends JFrame {
+	public FlowLayoutEx() {
+		this.setTitle("GUI 프로그램");
+		this.setDefaultCloseOperation(3);
+		Container cp = this.getContentPane();
+		cp.setLayout(new GridLayout(5, 4));
+		cp.add(new JButton("C"));
+		cp.add(new JButton("()"));
+		cp.add(new JButton("%"));
+		cp.add(new JButton("/"));
+		cp.add(new JButton("7"));
+		cp.add(new JButton("8"));
+		cp.add(new JButton("9"));
+		cp.add(new JButton("*"));
+		cp.add(new JButton("4"));
+		cp.add(new JButton("5"));
+		cp.add(new JButton("6"));
+		cp.add(new JButton("-"));
+		cp.add(new JButton("1"));
+		cp.add(new JButton("2"));
+		cp.add(new JButton("3"));
+		cp.add(new JButton("+"));
+		cp.add(new JButton("+/-"));
+		cp.add(new JButton("0"));
+		cp.add(new JButton("."));
+		cp.add(new JButton("="));
+		this.setSize(300, 200);
+		this.setVisible(true);
+		this.setSize(300, 200);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new FlowLayoutEx();
+	}
+}

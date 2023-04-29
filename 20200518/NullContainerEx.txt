@@ -1,0 +1,32 @@
+import java.awt.Container;
+import java.awt.LayoutManager;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class NullContainerEx extends JFrame {
+	public NullContainerEx() {
+		this.setTitle("배치관리자없는 GUI example");
+		this.setDefaultCloseOperation(3);
+		Container cp = this.getContentPane();
+		cp.setLayout((LayoutManager) null);
+		JLabel la = new JLabel("버튼을 눌러주세요");
+		la.setLocation(130, 20);
+		la.setSize(200, 20);
+		cp.add(la);
+
+		for (int i = 1; i <= 9; ++i) {
+			JButton b = new JButton(Integer.toString(i));
+			b.setLocation(i * 15, i * 20);
+			b.setSize(100, 20);
+			cp.add(b);
+		}
+
+		this.setSize(400, 300);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new NullContainerEx();
+	}
+}
