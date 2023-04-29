@@ -1,0 +1,26 @@
+public class ex04 {
+	public static void main(String[] args) {
+		int[] n = new int[]{1, 2, 3, 4, 5};
+		int sum = 0;
+		String[] f = new String[]{"사과", "배", "바나나", "체리", "딸기", "자몽"};
+		int[] var7 = n;
+		int var6 = n.length;
+
+		int var5;
+		for (var5 = 0; var5 < var6; ++var5) {
+			int k = var7[var5];
+			System.out.print(k + " ");
+			sum += k;
+		}
+
+		System.out.println("합:" + sum);
+		String[] var9 = f;
+		var6 = f.length;
+
+		for (var5 = 0; var5 < var6; ++var5) {
+			String s = var9[var5];
+			System.out.print(s + " ");
+		}
+
+	}
+}

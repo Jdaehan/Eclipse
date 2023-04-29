@@ -1,0 +1,18 @@
+public class ex05 {
+	public static void main(String[] args) {
+		double[][] score = new double[][]{{4.02D, 4.12D}, {4.13D, 4.15D}, {4.2D, 4.25D}, {4.3D, 4.5D}};
+		double sum = 0.0D;
+
+		int year;
+		int term;
+		for (year = 0; year < score.length; ++year) {
+			for (term = 0; term < score[year].length; ++term) {
+				sum += score[year][term];
+			}
+		}
+
+		year = score.length;
+		term = score[0].length;
+		System.out.println("4년 전체 평점 평균은 " + sum / (double) (year * term));
+	}
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ex03 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int[] num = new int[5];
+		int max = 0;
+		System.out.println("5개의 양수 값을 입력:");
+
+		for (int i = 0; i < 5; ++i) {
+			num[i] = input.nextInt();
+			if (num[i] > max) {
+				max = num[i];
+			}
+		}
+
+		System.out.println("\n가장 큰수: " + max);
+	}
+}

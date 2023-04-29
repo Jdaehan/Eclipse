@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ex02 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("exit를 입력하면 종료!");
+
+		String text;
+		do {
+			System.out.print(">>");
+			text = in.nextLine();
+		} while (!text.equals("exit"));
+
+		System.out.println("프로그램 종료!");
+	}
+}
