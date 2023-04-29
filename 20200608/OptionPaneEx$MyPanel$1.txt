@@ -1,0 +1,20 @@
+package pro0608;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import pro0608.OptionPaneEx.MyPanel;
+
+class OptionPaneEx$MyPanel$1 implements ActionListener {
+	OptionPaneEx$MyPanel$1(MyPanel var1) {
+		this.this$1 = var1;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		String name = JOptionPane.showInputDialog("이름을 입력하세요.");
+		if (name != null) {
+			this.this$1.tf.setText(name);
+		}
+
+	}
+}

@@ -1,0 +1,17 @@
+package pro0608;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JTextField;
+
+class TextAreaEx$1 implements ActionListener {
+	TextAreaEx$1(TextAreaEx var1) {
+		this.this$0 = var1;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		JTextField t = (JTextField) e.getSource();
+		this.this$0.ta.append(t.getText() + "\n");
+		t.setText("");
+	}
+}

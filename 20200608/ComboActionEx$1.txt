@@ -1,0 +1,17 @@
+package pro0608;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
+
+class ComboActionEx$1 implements ActionListener {
+	ComboActionEx$1(ComboActionEx var1) {
+		this.this$0 = var1;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		JComboBox<String> cb = (JComboBox) e.getSource();
+		int index = cb.getSelectedIndex();
+		this.this$0.imgLabel.setIcon(this.this$0.images[index]);
+	}
+}

@@ -1,0 +1,32 @@
+package pro0608;
+
+import java.awt.Color;
+import java.awt.Panel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import pro0608.OptionPaneEx.MyPanel.1;
+import pro0608.OptionPaneEx.MyPanel.2;
+import pro0608.OptionPaneEx.MyPanel.3;
+
+class OptionPaneEx$MyPanel extends Panel {
+	private JButton inputBtn;
+	private JTextField tf;
+	private JButton confirmBtn;
+	private JButton messageBtn;
+
+	public OptionPaneEx$MyPanel(OptionPaneEx var1) {
+      this.this$0 = var1;
+      this.inputBtn = new JButton("Input Name");
+      this.tf = new JTextField(10);
+      this.confirmBtn = new JButton("Confirm");
+      this.messageBtn = new JButton("Message");
+      this.setBackground(Color.LIGHT_GRAY);
+      this.add(this.inputBtn);
+      this.add(this.confirmBtn);
+      this.add(this.messageBtn);
+      this.add(this.tf);
+      this.inputBtn.addActionListener(new 1(this));
+      this.confirmBtn.addActionListener(new 2(this));
+      this.messageBtn.addActionListener(new 3(this));
+   }
+}

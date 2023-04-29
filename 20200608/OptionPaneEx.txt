@@ -1,0 +1,20 @@
+package pro0608;
+
+import java.awt.Container;
+import javax.swing.JFrame;
+import pro0608.OptionPaneEx.MyPanel;
+
+public class OptionPaneEx extends JFrame {
+	public OptionPaneEx() {
+		this.setTitle("옵션 팬 예제");
+		this.setDefaultCloseOperation(3);
+		Container c = this.getContentPane();
+		this.setSize(500, 200);
+		c.add(new MyPanel(this), "North");
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new OptionPaneEx();
+	}
+}

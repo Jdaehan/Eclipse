@@ -1,0 +1,33 @@
+package pro0608;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import pro0608.ComboActionEx.1;
+
+public class ComboActionEx extends JFrame {
+	private String[] fruits = new String[]{"apple", "banana", "mango"};
+	private ImageIcon[] images = new ImageIcon[]{new ImageIcon("images/apple.jpg"), new ImageIcon("images/banana.jpg"),
+			new ImageIcon("images/mango.jpg")};
+	private JLabel imgLabel;
+
+	public ComboActionEx() {
+      this.imgLabel = new JLabel(this.images[0]);
+      this.setTitle("콤보박스 활용 예제");
+      Container c = this.getContentPane();
+      c.setLayout(new FlowLayout());
+      JComboBox<String> combo = new JComboBox(this.fruits);
+      c.add(combo);
+      c.add(this.imgLabel);
+      combo.addActionListener(new 1(this));
+      this.setSize(800, 700);
+      this.setVisible(true);
+   }
+
+	public static void main(String[] args) {
+		new ComboActionEx();
+	}
+}

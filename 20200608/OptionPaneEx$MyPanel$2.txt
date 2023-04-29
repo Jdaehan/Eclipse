@@ -1,0 +1,25 @@
+package pro0608;
+
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import pro0608.OptionPaneEx.MyPanel;
+
+class OptionPaneEx$MyPanel$2 implements ActionListener {
+	OptionPaneEx$MyPanel$2(MyPanel var1) {
+		this.this$1 = var1;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		int result = JOptionPane.showConfirmDialog((Component) null, "계속할것입니까?", "Confirm", 0);
+		if (result == -1) {
+			this.this$1.tf.setText("종료");
+		} else if (result == 0) {
+			this.this$1.tf.setText("Yes");
+		} else {
+			this.this$1.tf.setText("No");
+		}
+
+	}
+}
