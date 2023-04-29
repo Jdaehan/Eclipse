@@ -1,0 +1,37 @@
+import CheckBoxItemEventEx.MyItemL;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class CheckBoxItemEventEx extends JFrame {
+	private JCheckBox[] fruits = new JCheckBox[3];
+	private String[] names = new String[]{"사과", "배", "체리"};
+	private JLabel sumLabel;
+
+	public CheckBoxItemEventEx() {
+		this.setTitle("체크박스와 ItemEvent 예제");
+		this.setDefaultCloseOperation(3);
+		Container c = this.getContentPane();
+		c.setLayout(new FlowLayout());
+		c.add(new JLabel("사과 100원, 배 500원, 체리한상자 20000원"));
+		MyItemL Listener = new MyItemL(this);
+
+		for (int i = 0; i < this.fruits.length; ++i) {
+			this.fruits[i] = new JCheckBox(this.names[i]);
+			this.fruits[i].setBorderPainted(true);
+			c.add(this.fruits[i]);
+			this.fruits[i].addItemListener(Listener);
+		}
+
+		this.sumLabel = new JLabel("현재 0원 입니다. ");
+		c.add(this.sumLabel);
+		this.setSize(300, 200);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new CheckBoxItemEventEx();
+	}
+}

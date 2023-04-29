@@ -1,0 +1,26 @@
+import java.awt.Container;
+import java.awt.FlowLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class ButtonImageEx extends JFrame {
+	public ButtonImageEx() {
+		this.setTitle("이미지 버튼 예제");
+		this.setDefaultCloseOperation(3);
+		Container c = this.getContentPane();
+		c.setLayout(new FlowLayout());
+		ImageIcon a1 = new ImageIcon("C:\\Users\\HOME\\eclipse-workspace\\연습\\img/call01.jpg");
+		ImageIcon a2 = new ImageIcon("C:\\Users\\HOME\\eclipse-workspace\\연습\\img/call04.jpg");
+		ImageIcon a3 = new ImageIcon("C:\\Users\\HOME\\eclipse-workspace\\연습\\img/call05.jpg");
+		JButton btn = new JButton("call~~ ", a1);
+		btn.setRolloverIcon(a2);
+		btn.setPressedIcon(a3);
+		this.setSize(400, 350);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new ButtonImageEx();
+	}
+}
