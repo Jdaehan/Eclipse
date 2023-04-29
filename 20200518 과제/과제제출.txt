@@ -1,0 +1,6 @@
+package 과제제출;
+
+public class CPtest {
+	public static void main(String[] args) {
+	}
+}
