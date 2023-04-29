@@ -1,0 +1,10 @@
+public class gogo {
+	int x;
+	int y;
+	int z;
+
+	public gogo() {
+		throw new Error(
+				"Unresolved compilation problem: \n\tSyntax error on token \";\", { expected after this token\n");
+	}
+}

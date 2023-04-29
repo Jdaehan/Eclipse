@@ -1,0 +1,105 @@
+import JDHPEP.1;
+import JDHPEP.2;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.Panel;
+import java.util.Calendar;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenuBar;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class JDHPEP extends JFrame {
+	protected static final JMenuBar MenuBar = null;
+	private JTextArea bb = new JTextArea(32, 70);
+	private JLabel imgLabel = new JLabel();
+	private Calendar c;
+	private int year;
+	private int month;
+	private int date;
+	private int hour;
+	private int min;
+	private int second;
+	private JLabel time;
+	private JTextField ab = new JTextField(10);
+	private JTextArea cd = new JTextArea(31, 120);
+	private static int size;
+	private JLabel imgLabel1 = new JLabel();
+	private String[] animal = new String[]{"고양이", "제작자", "만든 프로그램 간단 설명"};
+	private ImageIcon[] images = new ImageIcon[]{new ImageIcon("image/pc2.jpg"), new ImageIcon("image/img3.jpg"),
+			new ImageIcon("image/img2.jpg")};
+	private JLabel imgLabel2;
+	static String content = "";
+	static int flag = 0;
+	static int pos = 0;
+	static int fromindex = 0;
+
+	public JDHPEP() {
+      this.imgLabel2 = new JLabel(this.images[0]);
+      this.setTitle("★JDHPEP★");
+      this.setSize(800, 200);
+      this.setVisible(true);
+      this.setDefaultCloseOperation(3);
+      JOptionPane.showMessageDialog((Component)null, "JDHPEP에 방문해 해주셔서 진심으로 환영합니다.", "반갑습니다.", 1);
+      Container contentPane = this.getContentPane();
+      this.getContentPane().add(this.imgLabel, "Center");
+      contentPane.setLayout(new FlowLayout());
+      this.imgLabel.setIcon(new ImageIcon("image/img1.jpg"));
+      Container c = this.getContentPane();
+      c.setLayout(new FlowLayout());
+      this.setLocationRelativeTo((Component)null);
+      contentPane.setLayout(new FlowLayout());
+      JPanel panel = new JPanel();
+      JLabel IdLabel = new JLabel("아이디 : ");
+      JLabel psJLabel = new JLabel("비밀번호 : ");
+      JTextField ID = new JTextField(10);
+      JPasswordField PW = new JPasswordField(10);
+      PW.setEchoChar('*');
+      JButton longBtn = new JButton("로그인");
+      longBtn.setBackground(Color.cyan);
+      contentPane.add(longBtn);
+      Panel panel12up = new Panel();
+      Checkbox cb1 = new Checkbox("아이디 저장");
+      panel.add(cb1);
+      panel.add(panel12up);
+      panel.add(IdLabel);
+      panel.add(ID);
+      panel.add(psJLabel);
+      panel.add(PW);
+      panel.add(longBtn);
+      JButton btn1 = new JButton("메모");
+      c.add(btn1);
+      this.setSize(100, 120);
+      this.setVisible(true);
+      btn1.addActionListener(new 1(this, btn1, PW, ID, IdLabel, psJLabel, longBtn, cb1));
+      longBtn.addActionListener(new 2(this, ID, PW, btn1, IdLabel, psJLabel, longBtn, cb1));
+      this.add(panel);
+      this.setVisible(true);
+      this.setSize(800, 550);
+      this.setLocationRelativeTo((Component)null);
+      this.setResizable(false);
+      this.setDefaultCloseOperation(3);
+   }
+
+	public static void main(String[] args) {
+		new JDHPEP();
+		JFrame.setDefaultLookAndFeelDecorated(true);
+
+		try {
+			new JDHPEPClock();
+			Thread.sleep(1000L);
+		} catch (InterruptedException var2) {
+			var2.printStackTrace();
+		}
+
+	}
+}

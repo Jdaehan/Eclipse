@@ -1,0 +1,40 @@
+import JDHPEP.1;
+import java.awt.FileDialog;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import javax.swing.JFrame;
+
+class JDHPEP$1$2 implements ActionListener {
+	JDHPEP$1$2(1 var1, FileDialog var2, JFrame var3) {
+      this.this$1 = var1;
+      this.val$mOpen = var2;
+      this.val$frame = var3;
+   }
+
+	public void actionPerformed(ActionEvent e) {
+      this.val$mOpen.setVisible(true);
+      String data = this.val$mOpen.getDirectory() + this.val$mOpen.getFile();
+
+      try {
+         String str = "";
+         FileReader fr = new FileReader(data);
+         BufferedReader br = new BufferedReader(fr);
+         1.access$0(this.this$1).bb.setText("");
+
+         while((str = br.readLine()) != null) {
+            1.access$0(this.this$1).bb.append(str);
+            1.access$0(this.this$1).bb.append("\r\n");
+         }
+
+         br.close();
+         String Filename = this.val$mOpen.getFile();
+         this.val$frame.setTitle(Filename);
+         JDHPEP.flag = 1;
+      } catch (Exception var7) {
+         ;
+      }
+
+   }
+}

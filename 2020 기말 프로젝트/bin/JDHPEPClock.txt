@@ -1,0 +1,51 @@
+import JDHPEPClock.thread;
+import java.awt.Font;
+import java.awt.LayoutManager;
+import java.util.Calendar;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class JDHPEPClock extends JFrame {
+	private Calendar c;
+	private int year;
+	private int month;
+	private int date;
+	private int hour;
+	private int min;
+	private int second;
+	private JLabel time;
+	private JTextField aa = new JTextField(10);
+	private JTextArea bb = new JTextArea(31, 120);
+
+	public JDHPEPClock() {
+		this.setTitle("시간");
+		this.setDefaultCloseOperation(3);
+		this.setLocationRelativeTo(this.getOwner());
+		this.setLayout((LayoutManager) null);
+		this.time = new JLabel();
+		this.time.setFont(new Font("맑은고딕", 0, 20));
+		this.time.setBounds(120, 120, 300, 120);
+		this.add(this.time);
+		this.setDefaultCloseOperation(3);
+		Thread t = new Thread(new thread(this));
+		t.start();
+		this.setSize(240, 65);
+		this.setDefaultCloseOperation(3);
+		this.setVisible(true);
+		this.setLocation(1120, 0);
+	}
+
+	public static void main(String[] args) {
+		JFrame.setDefaultLookAndFeelDecorated(true);
+		new JDHPEPClock();
+
+		try {
+			Thread.sleep(1000L);
+		} catch (InterruptedException var2) {
+			var2.printStackTrace();
+		}
+
+	}
+}

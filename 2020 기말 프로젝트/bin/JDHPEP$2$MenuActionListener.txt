@@ -1,0 +1,183 @@
+import JDHPEP.2;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+
+class JDHPEP$2$MenuActionListener implements ActionListener {
+	JDHPEP$2$MenuActionListener(2 var1) {
+      this.this$1 = var1;
+   }
+
+	public void actionPerformed(ActionEvent e) {
+      String cmd = e.getActionCommand();
+      switch(cmd.hashCode()) {
+      case -2102370607:
+         if (cmd.equals("180° 회전")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.1.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -1875833323:
+         if (cmd.equals("채도 0%")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.3.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -1757505511:
+         if (cmd.equals("밝기 +50")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc3.3.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -1757503589:
+         if (cmd.equals("밝기 -50")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc3.4.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -1434041785:
+         if (cmd.equals("배경 제거")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2-4.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -877676111:
+         if (cmd.equals("가로 대칭")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.2.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -156077335:
+         if (cmd.equals("세로 대칭")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2-3.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case -111512522:
+         if (cmd.equals("오른쪽으로 90° 회전")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2-2.jpg"));
+            2.access$0(this.this$1).setSize(500, 800);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1638631:
+         if (cmd.equals("종료")) {
+            System.exit(0);
+         }
+         break;
+      case 49192488:
+         if (cmd.equals("숨기기")) {
+            2.access$0(this.this$1).imgLabel2.setVisible(false);
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 49580284:
+         if (cmd.equals("스케치")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc3.0.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 54487984:
+         if (cmd.equals("흐리게")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc3.1.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 878101944:
+         if (cmd.equals("다시보이기")) {
+            2.access$0(this.this$1).imgLabel2.setVisible(true);
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1210482804:
+         if (cmd.equals("채도 100%")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.9.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1474264928:
+         if (cmd.equals("모자이크")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.8.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1520491097:
+         if (cmd.equals("선명하게")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.7.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1562877476:
+         if (cmd.equals("원래대로")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.jpg"));
+            2.access$0(this.this$1).imgLabel2.setVisible(true);
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1564434961:
+         if (cmd.equals("50% 작게")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.5.jpg"));
+            2.access$0(this.this$1).setSize(400, 380);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1564505238:
+         if (cmd.equals("50% 크게")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2.6.jpg"));
+            2.access$0(this.this$1).setSize(1240, 800);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1690078996:
+         if (cmd.equals("흑백처리")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc3.2.jpg"));
+            2.access$0(this.this$1).setSize(800, 550);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+         break;
+      case 1864257758:
+         if (cmd.equals("왼쪽으로 90° 회전")) {
+            2.access$0(this.this$1).imgLabel2.setIcon(new ImageIcon("image/pc2-1.jpg"));
+            2.access$0(this.this$1).setSize(500, 800);
+            2.access$0(this.this$1).setResizable(false);
+            2.access$0(this.this$1).setLocationRelativeTo((Component)null);
+         }
+      }
+
+   }
+}

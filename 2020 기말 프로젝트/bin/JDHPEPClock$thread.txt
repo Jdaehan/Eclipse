@@ -1,0 +1,32 @@
+import java.util.Calendar;
+
+class JDHPEPClock$thread implements Runnable {
+	private JDHPEPClock$thread(JDHPEPClock var1) {
+		this.this$0 = var1;
+	}
+
+	public void run() {
+		while (true) {
+			this.this$0.c = Calendar.getInstance();
+			this.this$0.year = this.this$0.c.get(1);
+			this.this$0.month = this.this$0.c.get(2) + 1;
+			this.this$0.date = this.this$0.c.get(5);
+			this.this$0.hour = this.this$0.c.get(10);
+			this.this$0.min = this.this$0.c.get(12);
+			this.this$0.second = this.this$0.c.get(13);
+			String clock = Integer.toString(this.this$0.year);
+			clock = clock.concat("-");
+			clock = clock.concat(Integer.toString(this.this$0.month));
+			clock = clock.concat("-");
+			clock = clock.concat(Integer.toString(this.this$0.date));
+			clock = clock.concat(" ");
+			clock = clock.concat(Integer.toString(this.this$0.hour));
+			clock = clock.concat(":");
+			clock = clock.concat(Integer.toString(this.this$0.min));
+			clock = clock.concat(":");
+			clock = clock.concat(Integer.toString(this.this$0.second));
+			this.this$0.time.setText(clock);
+			this.this$0.time.setBounds(30, 0, 400, 25);
+		}
+	}
+}

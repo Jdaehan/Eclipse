@@ -1,0 +1,42 @@
+import JDHPEP.1;
+import java.awt.FileDialog;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import javax.swing.JFrame;
+
+class JDHPEP$1$4 implements ActionListener {
+	JDHPEP$1$4(1 var1, FileDialog var2, JFrame var3) {
+      this.this$1 = var1;
+      this.val$mSave = var2;
+      this.val$frame = var3;
+   }
+
+	public void actionPerformed(ActionEvent e) {
+      this.val$mSave.setVisible(true);
+      String data = this.val$mSave.getDirectory() + this.val$mSave.getFile();
+
+      try {
+         FileWriter fw = new FileWriter(data + ".txt");
+         BufferedWriter bw = new BufferedWriter(fw);
+         String str = 1.access$0(this.this$1).bb.getText();
+
+         for(int i = 0; i < str.length(); ++i) {
+            if (str.charAt(i) == '\n') {
+               System.out.println("find");
+               bw.newLine();
+            } else {
+               bw.write(str.charAt(i));
+            }
+         }
+
+         bw.close();
+         String Filename = this.val$mSave.getFile();
+         this.val$frame.setTitle(Filename + ".txt");
+      } catch (Exception var7) {
+         ;
+      }
+
+   }
+}

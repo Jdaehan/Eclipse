@@ -1,0 +1,13 @@
+import JDHPEP.1;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class JDHPEP$1$5 implements ActionListener {
+	JDHPEP$1$5(1 var1) {
+      this.this$1 = var1;
+   }
+
+	public void actionPerformed(ActionEvent e) {
+		System.exit(0);
+	}
+}
