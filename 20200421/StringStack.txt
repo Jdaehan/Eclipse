@@ -1,0 +1,21 @@
+class StringStack implements StackInterface {
+	String[] s = new String[5];
+	int i = 0;
+
+	public int length() {
+		return this.i + 1;
+	}
+
+	public String pop() {
+		return this.s[--this.i];
+	}
+
+	public boolean push(String ob) {
+		if (this.i == 5) {
+			return false;
+		} else {
+			this.s[this.i++] = ob;
+			return true;
+		}
+	}
+}

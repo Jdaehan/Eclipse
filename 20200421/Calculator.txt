@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+abstract class Calculator {
+	protected int a;
+	protected int b;
+
+	protected abstract int calc();
+
+	protected void input() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("정수 2개를 입력하세요>>");
+		this.a = scanner.nextInt();
+		this.b = scanner.nextInt();
+	}
+
+	public void run() {
+		this.input();
+		int res = this.calc();
+		System.out.println("계산된 값은 " + res);
+	}
+}

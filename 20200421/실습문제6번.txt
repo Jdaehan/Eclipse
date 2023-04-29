@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class 실습문제6번 {
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      Editor e = new Editor();
+      boolean f = true;
+
+      while(f) {
+         System.out.print("삽입(1), 삭제(2), 모두 보기(3), 종료(4) >> ");
+         int into = scanner.nextInt();
+         switch(into) {
+         case 1:
+            e.into();
+            break;
+         case 2:
+            e.Delete();
+            break;
+         case 3:
+            e.crate();
+            break;
+         case 4:
+            System.out.println("프로그램을 종료합니다...");
+            f = false;
+         }
+      }
+
+   }
+}

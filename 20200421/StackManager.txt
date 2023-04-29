@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class StackManager {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		StringStack stack = new StringStack();
+		System.out.print(">>");
+
+		int i;
+		for (i = 0; i < 5; ++i) {
+			String ob = scanner.next();
+			stack.push(ob);
+		}
+
+		for (i = 0; i < 5; ++i) {
+			System.out.print(stack.pop() + " ");
+		}
+
+		scanner.close();
+	}
+}

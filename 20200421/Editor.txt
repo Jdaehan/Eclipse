@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class Editor extends shape {
+	Scanner scanner;
+	static int i = 0;
+	private String[] Shape;
+
+	Editor() {
+		this.scanner = new Scanner(System.in);
+		this.Shape = new String[10];
+	}
+
+	public void into() {
+		System.out.print("도형 종류 Line(1), Rect(2), Circle(3) >> ");
+		int choice = this.scanner.nextInt();
+		switch (choice) {
+			case 1 :
+				this.Shape[i] = "Line";
+				++i;
+				break;
+			case 2 :
+				this.Shape[i] = "Rect";
+				++i;
+				break;
+			case 3 :
+				this.Shape[i] = "Circle";
+				++i;
+		}
+
+	}
+
+	public void Delete() {
+		System.out.print("삭제할 도형의 위치 >> ");
+		int location = this.scanner.nextInt();
+		if (i < location) {
+			System.out.println("삭제할 수 없습니다.");
+		} else {
+			this.Shape[location - 1] = null;
+		}
+
+	}
+
+	public void crate() {
+		for (int j = 0; j < i; ++j) {
+			System.out.println(this.Shape[j]);
+		}
+
+	}
+}

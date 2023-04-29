@@ -1,0 +1,5 @@
+class Adder extends Calculator {
+	protected int calc() {
+		return this.a + this.b;
+	}
+}
