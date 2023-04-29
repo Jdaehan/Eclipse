@@ -1,0 +1,21 @@
+package gogo;
+
+import java.util.Scanner;
+
+public class JangDaeHan {
+	public static void main(String[] args) {
+		Scanner jd1 = new Scanner(System.in);
+		System.out.print("자바 프로그래밍 점수 입력:");
+		int Score = jd1.nextInt();
+		if (Score >= 90) {
+			System.out.println("자바 프로그래밍 점수 :" + Score + ",학점: A");
+		} else if (Score >= 80) {
+			System.out.println("자바 프로그래밍 점수 :" + Score + ",학점: B");
+		} else if (Score >= 70) {
+			System.out.println("자바 프로그래밍 점수 :" + Score + ",학점: c");
+		} else {
+			System.out.println("자바 프로그래밍 점수 :" + Score + ",학점: F");
+		}
+
+	}
+}
