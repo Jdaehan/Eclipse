@@ -1,0 +1,20 @@
+package four;
+
+public class ScorseAverage {
+	public static void main(String[] args) {
+		double[][] score = new double[][]{{3.3D, 3.4D}, {3.5D, 3.6D}, {3.7D, 4.0D, 0.0D}, {4.1D, 4.2D}};
+		double sum = 0.0D;
+
+		int year;
+		int term;
+		for (year = 0; year < score.length; ++year) {
+			for (term = 0; term < score[year].length; ++term) {
+				sum += score[year][term];
+			}
+		}
+
+		year = score.length;
+		term = score[0].length;
+		System.out.println("4년 전체 평점 평균은 " + sum / (double) (year * term));
+	}
+}

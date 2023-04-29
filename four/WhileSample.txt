@@ -1,0 +1,23 @@
+package four;
+
+import java.util.Scanner;
+
+public class WhileSample {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int count = 0;
+		int n = false;
+		double sum = 0.0D;
+		System.out.println("정수를 입력하고 마지막에 0을 입력하세요.");
+
+		int n;
+		while ((n = scanner.nextInt()) != 0) {
+			sum += (double) n;
+			++count;
+		}
+
+		System.out.print("수의 개수는 " + count + "개이며 ");
+		System.out.println("평균은 " + sum / (double) count + "입니다.");
+		scanner.close();
+	}
+}
