@@ -1,0 +1,36 @@
+package pro20191450;
+
+import java.util.Scanner;
+
+public class gogo {
+	public static void main(String[] args) {
+		Scanner scanner;
+		boolean res;
+		label37 : {
+			scanner = new Scanner(System.in);
+			System.out.print("논리 연산을 입력하세요>>");
+			boolean a = scanner.nextBoolean();
+			String op = scanner.next();
+			boolean b = scanner.nextBoolean();
+			res = false;
+			switch (op.hashCode()) {
+				case 2531 :
+					if (op.equals("OR")) {
+						res = a || b;
+						break label37;
+					}
+					break;
+				case 64951 :
+					if (op.equals("AND")) {
+						res = a && b;
+						break label37;
+					}
+			}
+
+			System.out.println("잘못된 논리 연산자입니다");
+		}
+
+		System.out.println(res);
+		scanner.close();
+	}
+}

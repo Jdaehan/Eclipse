@@ -1,0 +1,56 @@
+package pro20191450;
+
+import java.util.Scanner;
+
+public class jang03 {
+	public static void main(String[] args) {
+		label44 : {
+			label45 : {
+				label32 : {
+					Scanner scanner = new Scanner(System.in);
+					System.out.print("학점을 입력하세요>>");
+					String score = scanner.next();
+					switch (score.hashCode()) {
+						case 65 :
+							if (score.equals("A")) {
+								break label44;
+							}
+							break label32;
+						case 66 :
+							if (score.equals("B")) {
+								break label44;
+							}
+							break label32;
+						case 67 :
+							if (!score.equals("C")) {
+								break label32;
+							}
+							break;
+						case 68 :
+							if (!score.equals("D")) {
+								break label32;
+							}
+							break;
+						case 70 :
+							if (score.equals("F")) {
+								break label45;
+							}
+						default :
+							break label32;
+					}
+
+					System.out.println("Good");
+					break label45;
+				}
+
+				System.out.print("학점을 잘못입력 하셨습니다.");
+				return;
+			}
+
+			System.out.println("Bye");
+			return;
+		}
+
+		System.out.println("Excellent");
+	}
+}

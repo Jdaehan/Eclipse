@@ -1,0 +1,28 @@
+package pro20191450;
+
+import java.util.Scanner;
+
+public class jang02 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("논리연산을 입력하세요>>");
+		boolean a = scanner.nextBoolean();
+		String log = scanner.next();
+		boolean b = scanner.nextBoolean();
+		switch (log.hashCode()) {
+			case 2531 :
+				if (log.equals("OR")) {
+					System.out.println(a || b);
+					return;
+				}
+				break;
+			case 64951 :
+				if (log.equals("AND")) {
+					System.out.println(a && b);
+					return;
+				}
+		}
+
+		System.out.println("잘못된 논리 연산자 입력입니다.");
+	}
+}

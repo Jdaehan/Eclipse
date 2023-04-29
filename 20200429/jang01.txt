@@ -1,0 +1,13 @@
+package pro20191450;
+
+import java.util.Scanner;
+
+public class jang01 {
+	public static void main(String[] args) {
+		Scanner hi = new Scanner(System.in);
+		System.out.print("몇 층인지 입력하세요");
+		int n1 = hi.nextInt();
+		int mul = n1 * 5;
+		System.out.println(mul + "m" + " 입니다");
+	}
+}
