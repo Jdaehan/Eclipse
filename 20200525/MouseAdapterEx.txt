@@ -1,0 +1,14 @@
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+class MouseAdapterEx$MyMouseAdapter extends MouseAdapter {
+	MouseAdapterEx$MyMouseAdapter(MouseAdapterEx var1) {
+		this.this$0 = var1;
+	}
+
+	public void mousePressed(MouseEvent e) {
+		int x = e.getX();
+		int y = e.getY();
+		this.this$0.la.setLocation(x, y);
+	}
+}

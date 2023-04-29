@@ -1,0 +1,26 @@
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
+class MouseListenerEx$MyMouseListener implements MouseListener {
+	MouseListenerEx$MyMouseListener(MouseListenerEx var1) {
+		this.this$0 = var1;
+	}
+
+	public void mouseClicked(MouseEvent arg0) {
+	}
+
+	public void mousePressed(MouseEvent arg0) {
+	}
+
+	public void mouseReleased(MouseEvent arg0) {
+	}
+
+	public void mouseEntered(MouseEvent e) {
+		int x = e.getX();
+		int y = e.getY();
+		this.this$0.la.setLocation(x, y);
+	}
+
+	public void mouseExited(MouseEvent e) {
+	}
+}

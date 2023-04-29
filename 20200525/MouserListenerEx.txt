@@ -1,0 +1,26 @@
+import MouseListenerEx.MyMouseListener;
+import java.awt.Container;
+import java.awt.LayoutManager;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class MouseListenerEx extends JFrame {
+	private JLabel la = new JLabel("Hello");
+
+	public MouseListenerEx() {
+		this.setTitle("마우스 이벤트 처리 프로그램");
+		this.setDefaultCloseOperation(3);
+		Container c = this.getContentPane();
+		c.addMouseListener(new MyMouseListener(this));
+		c.setLayout((LayoutManager) null);
+		this.la.setSize(50, 20);
+		this.la.setLocation(30, 30);
+		c.add(this.la);
+		this.setSize(200, 200);
+		this.setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new MouseListenerEx();
+	}
+}
